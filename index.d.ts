@@ -1,3 +1,9 @@
+// Type definitions for node-xmpp-client 3.1
+// Project: https://github.com/node-xmpp/node-xmpp/tree/master/packages/node-xmpp-client/
+// Definitions by: PJakcson <https://github.com/PJakcson>
+// Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
+// TypeScript Version: 2.1
+
 export declare class Client {
     static Stanza: Stanza;
 
@@ -7,14 +13,15 @@ export declare class Client {
 
     disconnect(): void;
 
-    on(event: string, c: (err: any, r: any) => any): void;
+    on(event: string, c: (e: any, d: any) => any): void;
 
     send(stanza: any): void;
-
-    end(): void;
 }
 
 interface Stanza extends Element {
+    // This has to be used for the static class initializer new Client.Stanza(..). If there is a better way feel free to
+    // contribute.
+    // tslint:disable-next-line
     new(name: string, attr: any): Stanza;
     from: string;
     to: string;
@@ -59,6 +66,6 @@ interface XmppOptions {
 }
 
 interface Bosh {
-    url?: string
-    prebind?: (error, data) => void;
+    url?: string;
+    prebind?: (error: any, data: any) => void;
 }

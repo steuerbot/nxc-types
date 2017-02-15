@@ -1,9 +1,22 @@
 {
   "compilerOptions": {
     "module": "commonjs",
-    "target": "es5",
-    "sourceMap": true
+    "lib": [
+      "es6"
+    ],
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "baseUrl": "../",
+    "typeRoots": [
+      "../"
+    ],
+    "types": [],
+    "noEmit": true,
+    "forceConsistentCasingInFileNames": true
   },
-  "exclude": [
+  "files": [
+    "index.d.ts",
+    "node-xmpp-client-tests.ts"
   ]
 }
