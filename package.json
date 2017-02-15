@@ -1,6 +1,6 @@
 {
   "name": "@steuerbot/node-xmpp-client",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "TypeScript definitions for https://github.com/node-xmpp/node-xmpp/tree/master/packages/node-xmpp-client.",
   "repository": {
     "type": "git",
